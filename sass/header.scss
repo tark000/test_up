@@ -1,0 +1,142 @@
+.top-bar {
+  background-color: #fff;
+  ul {
+    background-color: transparent;
+  }
+  &-mein {
+    .top-bar {
+      padding: 33px 0 42px;
+    }
+  }
+  &-list {
+    background-color:  #e8e8e8;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0 47px;
+      margin: 0;
+      @include breakpoint($start-responcive down) {
+        padding: 40px 0 37px;
+      }
+      @include breakpoint(small only) {
+        flex-direction: column;
+      }
+      li {
+        list-style-type: none;
+        margin-right: 3%;
+        @include breakpoint(small only) {
+          margin: 0;
+          border-bottom: 1px solid grey;
+        }
+        a {
+          color: $meny-text-color;
+          font-size: $meny-text-size;
+          @include breakpoint($start-responcive down) {
+            font-size: $meny-text-size-small;
+          }
+        }
+      }
+    }
+  }
+  .menu .menu-text {
+    padding: 0;
+  }
+  .dropdown {
+    &.menu {
+      @include breakpoint(large down) {
+        justify-content: center;
+      }
+      @include breakpoint(small only) {
+        position: relative;
+      }
+      .is-dropdown-submenu-parent {
+        @include breakpoint(small only) {
+          position: initial;
+        }
+      }
+      a {
+        padding: 0;
+        &.menu {
+          &-cart {
+            background: url('../img/001-shopping-purse-icon.svg') center no-repeat #fff;
+          }
+          &-user {
+            background: url('../img/003-user.svg') center no-repeat #fff;
+            margin-left: 47px;
+            &:after {
+              display: none;
+              padding-right: 0;
+            }
+          }
+          &-cart, &-user {
+            width: 67px;
+            height: 67px;
+            background-size: cover;
+          }
+        }
+      }
+      & > li.opens-left > .is-dropdown-submenu {
+        top: 148%;
+      }
+    }
+    .is-dropdown-submenu {
+      max-width: 100%;
+      min-width: 442px;
+      border: 2px solid #dfdfdf;
+      @include breakpoint(small only) {
+        min-width: 90%;
+        left: 0;
+      }
+      li:last-child a {
+        border-bottom: none;
+      }
+      a {
+        padding: 33px 10px 41px 97px;
+        color: $meny-text-color;
+        font-size: $meny-text-size;
+        border-bottom: 2px solid #dfdfdf;
+        @include breakpoint($start-responcive down) {
+          font-size: $meny-text-size-small;
+        }
+        &.menu {
+          &-account {
+            background: url('../img/004-id-card.svg') 22px center no-repeat #fff;
+            background-size: 49px 49px;
+          }
+          &-orders {
+            background: url('../img/005-box.svg') 31px center no-repeat #fff;
+            background-size: 42px 48px;
+          }
+          &-contact {
+            background: url('../img/006-mail.svg') 31px center no-repeat #fff;
+            background-size: 46px;
+          }
+        }
+      }
+    }
+  }
+}
+.title-bar {
+  background: #fff;
+  border-bottom: 1px solid #000;
+  position: relative;
+  justify-content: center;
+  .menu-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translatey(-50%);
+    &::after {
+      background: #000;
+      -webkit-box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+      box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+    }
+  }
+}
+.logo {
+  max-width: 35%;
+  fill: red;
+  path {
+    fill: red;
+  }
+}

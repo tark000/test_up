@@ -1,0 +1,9 @@
+$xy-grid: false;
+@import 'foundation';
+@include foundation-everything;
+
+// Custom styles
+@import 'global';
+@import 'header';
+@import 'article';
+@import 'footer';

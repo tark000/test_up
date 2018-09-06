@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.grid-container {
+  max-width: 2020px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+$meny-text-color: #393939;
+$meny-text-size: 32px;
+$meny-text-size-small: 24px;
+$start-responcive: 1440;
